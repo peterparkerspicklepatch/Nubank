@@ -1,0 +1,17 @@
+{
+    "contents" : "#import data\nnubank_train <- read.csv('train.csv' , header = T)\nnubank_test <- read.csv('test.csv', header = T)\n\n#check out data, check if hashes are categorical variables\nstr(nubank_train)\n\n#check out y variable\nlibrary(ggplot2); library(pastecs)\nqplot(nubank_train$target)\nstat.desc(nubank_train$target)\n\nlibrary(caret)\nlinear <- train(target ~., data = nubank_train, method = \"glm\")\nlinear\n\nlinear$finalModel\n\nhist(nun)\npredictions <- predict(linear, newdata = nubank_test)\n\n",
+    "created" : 1443454092641.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3813497805",
+    "id" : "B751254B",
+    "lastKnownWriteTime" : 1443631004,
+    "path" : "C:/Users/VT8575P/Dropbox/R Projects/machinelearning/nubank.R",
+    "project_path" : "nubank.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1444628381565.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9D6B0006",
+    "lastKnownWriteTime" : 8315177837493485567,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "szluaiyvov",
+        "caption" : "nubank_train",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=nubank_train&cache_key=szluaiyvov",
+        "displayedObservations" : 24976,
+        "environment" : "",
+        "object" : "nubank_train",
+        "totalObservations" : 24976,
+        "variables" : 108
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

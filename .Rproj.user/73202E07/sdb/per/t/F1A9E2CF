@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1444628548935.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F1A9E2CF",
+    "lastKnownWriteTime" : 7022344803105205760,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "2wfeqp2ehe",
+        "caption" : "nubank_train_notarget",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=nubank_train_notarget&cache_key=2wfeqp2ehe",
+        "displayedObservations" : 24976,
+        "environment" : "",
+        "object" : "nubank_train_notarget",
+        "totalObservations" : 24976,
+        "variables" : 107
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,18 @@
+{
+    "contents" : "#import data\nnubank_train <- read.csv('train.csv' , header = T)\nnubank_train_notarget <- nubank_train[, -1] \nnubank_test <- read.csv('test.csv', header = T)\n\n#check out data, check if hashes are categorical variables\nstr(nubank_train)\n\n#check out y variable\nlibrary(ggplot2); library(pastecs)\nqplot(nubank_train$target)\nstat.desc(nubank_train$target)\n\n#preliminary results show dependent variable is not a standard normal. Does a simple power transformation help?\nqplot(nubank_train$target^(1/4))\n\n#Much better. Incorporate into model.\nnubank_train$target <- nubank_train$target^(1/4)\n\n\n#Consider linear model with ALL variables \nlinear <- lm(nubank$target ~ ., data = nubank_train_notarget)\nsummary(linear)\n\n#Find lamda that min cross validation errors\nlibrary(lars)\nmodel.lasso <- lars(x, y, type=\"lasso\")\nsummary(model.lasso)\n\n#Report lasso regression parameter\nmin_err <- model.lasso$df[which.min(model.lasso$RSS)]\n\npredict <- predict(model.lasso, nubank_train, s = best_step, \n                   type = \"modmodel.lasso\")$model.lasso\nrsme <- mean((y - predictions)^2)\nrsme\n\n\n",
+    "created" : 1443408892869.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2926160045",
+    "id" : "E1009246",
+    "lastKnownWriteTime" : 1444709459,
+    "path" : "~/Dropbox/R Projects/Nubank/nubank.R",
+    "project_path" : "nubank.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
