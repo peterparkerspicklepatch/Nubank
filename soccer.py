@@ -61,33 +61,3 @@ for year in years:
 
 #moment of truth
 standings_df.head()
-
-
-# In[44]:
-
-#success! but we can't hardcode, per instructions so we have to grab column names
-col_url = 'http://footballdatabase.com/league-scores-tables/italy-serie-a-2012-13'
-col_req = requests.get(soccer_url) #open page
-col_soup = BeautifulSoup(req.content, "lxml") #make into soup objec
-col_soup.findAll('tr', limit=2)
-
-
-# In[45]:
-
-column_names
-
-
-# In[9]:
-
-standings_df_col = (standings_df, columns=column_names)
-
-
-# In[40]:
-
-soccer_url_final
-
-
-# In[ ]:
-
-
-
